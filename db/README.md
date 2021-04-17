@@ -15,7 +15,7 @@ docker run -p 5432:5432 -d \
     -e POSTGRES_DB=$PG_NAME \
     -v pgdata:/var/lib/postgresql/data \
     --name $PG_CONTAINER_NAME \
-    postgres
+    postgres:alpine
 ```
 
 To enter the container and interact with db
@@ -28,7 +28,7 @@ docker exec -it $PG_CONTAINER_NAME psql -U $PG_USER $PG_NAME
 Sometimes is is useful to look a database directly as an admin using a GUI for speed. In this case that GUI would be pgadmin4, and since we are dockerizing the db, we should also dockerize the gui.
 This is mostly a development feature, as such, when we begin automating deployment, this will be a dev step, but not generally done in deployment.
 
-pgadmin could probably be configured to run safely in production using the tls protocols. 
+pgadmin could probably be configured to run safely in production using the tls protocols.
 To start the pgadmin container
 ```
 docker run -p 8080:80 -d \
@@ -37,6 +37,6 @@ docker run -p 8080:80 -d \
     -e PGADMIN_LISTEN_PORT=80 \
     -v pgadmindata:/var/lib/pgadmin \
     --name $PGADMIN_CONTAINER_NAME \
-    --link ketopaldb:ketopaldb \
+    --link $PG_CONTAINER_NAME:$PG_CONTAINER_NAME \
     dpage/pgadmin4
 ```
