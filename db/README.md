@@ -9,7 +9,7 @@ I haven't decided yet whether the containers will be managed with ansible, kuber
 
 To start a fresh container
 ```
-docker run -p 5432:5432 -d \
+docker run -p 54321:5432 -d \
     -e POSTGRES_PASSWORD=$PG_PASS \
     -e POSTGRES_USER=$PG_USER \
     -e POSTGRES_DB=$PG_NAME \

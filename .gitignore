@@ -57,12 +57,17 @@ yarn-error.log
 package-lock.json
 
 #extras
+.idea/
 built/*
 build.json
 .settings
 .eslintcache
+build/
+tmp/
+temp/
 
 #vs code
+.vscode/
 **/.vs
 **/.vscode/*
 !**/.vscode/tasks.json
