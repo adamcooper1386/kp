@@ -14,7 +14,7 @@ export default function Home({
     title: string
     id: string
   }[]
-}) {
+}): React.fn {
   return (
     <Layout home>
       <Head>

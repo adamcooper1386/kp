@@ -13,7 +13,7 @@ export default function Post({
     date: string
     contentHtml: string
   }
-}) {
+}): React.fn {
   return (
     <Layout>
       <Head>

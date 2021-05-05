@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, fireEvent } from '../testUtils'
+import { render } from '../testUtils'
 import AllPostsDataMock from '../__mocks__/allPostsDataMock'
 import Home from '../../pages/index'
 
