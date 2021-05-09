@@ -1,9 +1,9 @@
-import { render } from '@testing-library/react'
+import { render, RenderResult } from '@testing-library/react'
 // import { ThemeProvider } from "my-ui-lib"
 // import { TranslationProvider } from "my-i18n-lib"
 // import defaultStrings from "i18n/en-x-default"
 
-const Providers = ({ children }): React.fn => {
+const Providers = ({ children }): React.ReactElement => {
   return children
   // return (
   //   <ThemeProvider theme="light">
@@ -14,7 +14,7 @@ const Providers = ({ children }): React.fn => {
   // )
 }
 
-const customRender = (ui: React.fn, options = {}): React.ReactNode =>
+const customRender = (ui: React.ReactElement<any>, options = {}): RenderResult =>
   render(ui, { wrapper: Providers, ...options })
 
 // re-export everything

@@ -4,16 +4,16 @@ import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
 
-const postsDirectory = path.join(process.cwd(), 'posts')
+const postsDirectory = path.join(process.cwd(), 'src', 'posts')
 
-interface PostData {
+export interface PostData {
   id: string,
   date: string,
   title: string,
   contentHtml?: string
 }
-
-export function getSortedPostsData(): [PostData] {
+//'{ date: string; title: string; id: string; }[]
+export function getSortedPostsData(): PostData[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map(fileName => {
@@ -43,7 +43,12 @@ export function getSortedPostsData(): [PostData] {
   })
 }
 
-export function getAllPostIds():[string] {
+interface PostId {
+  params: {
+    id: string
+  }
+}
+export function getAllPostIds():PostId[] {
   const fileNames = fs.readdirSync(postsDirectory)
   return fileNames.map(fileName => {
     return {
@@ -54,7 +59,7 @@ export function getAllPostIds():[string] {
   })
 }
 
-export async function getPostData(id: string): [PostData] {
+export async function getPostData(id: string): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 

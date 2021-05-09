@@ -1,11 +1,12 @@
 import React from 'react'
 import { render } from '../testUtils'
 import AllPostsDataMock from '../__mocks__/allPostsDataMock'
-import Home from '../../pages/index'
+import Home from '../../src/pages/index'
 
 describe('Home page', () => {
   it('matches snapshot', () => {
-    const { asFragment } = render(<Home allPostsData={AllPostsDataMock.emptyAllPostsData}/>, {})
+    const { asFragment } = render(<Home />)
+    //allPostsData={AllPostsDataMock.emptyAllPostsData}/>, {})
     expect(asFragment()).toMatchSnapshot()
   })
 
