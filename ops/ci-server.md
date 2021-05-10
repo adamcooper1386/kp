@@ -30,4 +30,6 @@ The certificate will be good for 90 days, so auto renewing is important. Followi
 
 Had to finish the Step 4 tasks afterwords but was able to login to jenkins on https. Will try and make a snapshot image of this, restart the instance etc, but should continue to work.
 
+# STep six: Docker
 
+So in order for jenkins to use docker in the builds, it needs to be installed on the host, I think, so I had to backtrack from ci-jenkins-setup and install docker on ubuntu. https://docs.docker.com/engine/install/ubuntu/ and the follow up steps to run docker as the jenkins user. (Quirk, had to restart jenkins to get docker to work, but if I do this first shouldn't matter)
