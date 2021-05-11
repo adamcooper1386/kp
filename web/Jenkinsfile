@@ -4,8 +4,10 @@ pipeline {
         stage('build') {
             steps {
 		echo "Build the docker image"
-		script {
-			docker.build('adamcooper1386/ketopal', './web')
+		dir('web') {
+			script {
+				docker.build('adamcooper1386/ketopal')
+			}
 		}
             }
         }
