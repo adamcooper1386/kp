@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                docker.build('adamcooper1386/ketopal')
+		echo "Build the docker image"
+		script {
+                    docker.build('adamcooper1386/ketopal')
+		}
             }
         }
     }
