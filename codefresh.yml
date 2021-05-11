@@ -25,7 +25,7 @@ steps:
     image_name: "adamcooper1386/kp"
     working_directory: "${{clone}}/web"
     tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
-    dockerfile: "web/Dockerfile"
+    dockerfile: "./Dockerfile"
     stage: "build"
 
   test:
