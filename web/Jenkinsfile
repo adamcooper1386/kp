@@ -5,6 +5,7 @@ pipeline {
             steps {
 		echo "Build the docker image"
 		script {
+			docker.build('adamcooper1386/ketopal')
 		}
             }
         }
