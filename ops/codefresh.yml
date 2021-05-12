@@ -30,7 +30,8 @@ steps:
         image: "ubuntu:latest" # The image in which command will be executed
         working_directory: "${{clone}}/web" # Running command where code cloned
         commands:
-          - "ls"
+          - "yarn install"
+          - "yarn test"
 
     # build:
     #title: "Building Docker image"
