@@ -15,7 +15,7 @@ export default function Home(): React.ReactNode {
   return (
     <Layout>
       <section className={utilStyles.headingMd}>
-        <h1>KetoPal</h1>
+        <h1>Ketosistant</h1>
         <h2>A modern application for managing medical keto diets</h2>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
