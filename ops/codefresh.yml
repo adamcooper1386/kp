@@ -22,12 +22,15 @@ steps:
 
   unitTests:
     title: "Running unit and single service request test"
-    type: "freestyle" # Run any command
-    image: "ubuntu:latest" # The image in which command will be executed
-    working_directory: "${{clone}}" # Running command where code cloned
-    commands:
-      - "ls"
+    type: parallel
     stage: unitTest
+    steps:
+      webUnitTests:
+        type: freestyle
+        image: "ubuntu:latest" # The image in which command will be executed
+        working_directory: "${{clone}}/web" # Running command where code cloned
+        commands:
+          - "ls"
 
     # build:
     #title: "Building Docker image"
