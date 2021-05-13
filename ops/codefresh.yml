@@ -33,14 +33,15 @@ steps:
           - "yarn install"
           - "yarn test"
 
-    # build:
-    #title: "Building Docker image"
-    #type: "build"
-    #image_name: "adamcooper1386/kp"
-    #working_directory: "${{clone}}/web"
-    #tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
-    #dockerfile: "./Dockerfile"
-    #stage: "build"
-
-
+  build:
+    title: "Building Docker images"
+    type: parallel
+    stage: build
+    steps:
+      webBuild:
+        type: build
+        working_directory: "${{clone}}/web"
+        image_name: "adamcooper1386/kp-web"
+        tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
+        dockerfile: "./Dockerfile"
 
