@@ -64,6 +64,8 @@ build.json
 build/
 tmp/
 temp/
+.next
+.next/*
 
 #vs code
 .vscode/
