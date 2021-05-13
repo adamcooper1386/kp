@@ -8,7 +8,6 @@ describe('Home page', () => {
     const { asFragment } = render(<Home />)
     //allPostsData={AllPostsDataMock.emptyAllPostsData}/>, {})
     expect(asFragment()).toMatchSnapshot()
-    expect(false).toBe(true)
   })
 
   // it('clicking button triggers alert', () => {
