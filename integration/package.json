@@ -1,0 +1,13 @@
+{
+  "name": "integration",
+  "version": "1.0.0",
+  "description": "integration test suite",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^7.3.0"
+  },
+  "scripts": {
+    "open": "./node_modules/.bin/cypress open"
+  }
+}
