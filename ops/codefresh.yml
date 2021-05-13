@@ -27,7 +27,7 @@ steps:
     steps:
       webUnitTests:
         type: freestyle
-        image: "node:current-alpline"
+        image: "node:current-alpine"
         working_directory: "${{clone}}/web" # Running command where code cloned
         commands:
           - "yarn install"
