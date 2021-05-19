@@ -1,1 +1,5 @@
-{}
+{
+	"env": {
+		"host": "https://test.ketosis.com"
+	}
+}
