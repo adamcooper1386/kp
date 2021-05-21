@@ -54,6 +54,13 @@ node_modules
 .node_modules/
 yarn-error.log
 package-lock.json
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 #extras
 .idea/
