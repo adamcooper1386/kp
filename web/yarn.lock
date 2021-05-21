@@ -6624,6 +6624,13 @@ __metadata:
     ts-node: ^9.1.1
     typescript: ^4.2.4
     utf-8-validate: ^5.0.5
+  dependenciesMeta:
+    core-js:
+      built: false
+    core-js-pure:
+      built: false
+    date-fns:
+      built: false
   languageName: unknown
   linkType: soft
 

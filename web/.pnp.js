@@ -5073,7 +5073,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.12.1", {
-          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.12.1-ac3be20f93/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.12.1-ac3be20f93-f1f797aacc.zip/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.12.1"]
           ],
