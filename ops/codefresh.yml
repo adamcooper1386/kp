@@ -30,7 +30,6 @@ steps:
         image: "node:current-alpine"
         working_directory: "${{clone}}/web" # Running command where code cloned
         commands:
-          - "yarn install"
           - "yarn test"
 
   build:
@@ -41,7 +40,7 @@ steps:
       webBuild:
         type: build
         working_directory: "${{clone}}/web"
-        image_name: "adamcooper1386/kp-web"
-        tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
+        image_name: "adamcooper1386/ketosistant-web"
+        tag: "test"
         dockerfile: "./Dockerfile"
 

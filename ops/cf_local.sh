@@ -1,3 +1,3 @@
 #!/bin/bash
 
-codefresh run "ketosistant Ci/Cd/Ci" --local --local-volume --yaml=./ops/codefresh.yml -b master -t my-trigger
+codefresh run "ketosistant Ci/Cd/Ci" --local --local-volume --yaml=./codefresh.yml -b main -t my-trigger
